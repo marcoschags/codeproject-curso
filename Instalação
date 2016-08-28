@@ -9,3 +9,7 @@ composer global require "laravel/installer"
 composer create-project laravel/laravel codeproject-curso
 
 ##Postman
+
+##Mudar namespace
+php artisan app:name CodeProject
+
