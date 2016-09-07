@@ -29,5 +29,8 @@ $client->save();
 CodeProject\Client::all();
 $c = CodeProject\Client::find(1);
 
-##Criando primeiro registro(Automatizado)
-
+##Factory Client
+php artisan tinker
+factory('CodeProject\Client')->make();
+factory('CodeProject\Client')->create();
+factory('CodeProject\Client', 5)->create();
