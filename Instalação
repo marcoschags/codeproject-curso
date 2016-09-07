@@ -13,3 +13,21 @@ composer create-project laravel/laravel codeproject-curso
 ##Mudar namespace
 php artisan app:name CodeProject
 
+##Criar model e migrate
+php artisan make:Client -m
+
+##Criando primeiro registro(Manual)
+php artisan tinker
+$client = new CodeProject\Client;
+$client->name = "Empresa X";
+$client->responsible = "Marcos";
+$client->email = "email@email.com";
+$client->phone = "555-5555";
+$client->address = "endereco";
+$client->obs = "observacao";
+$client->save();
+CodeProject\Client::all();
+$c = CodeProject\Client::find(1);
+
+##Criando primeiro registro(Automatizado)
+
