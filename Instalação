@@ -34,3 +34,10 @@ php artisan tinker
 factory('CodeProject\Client')->make();
 factory('CodeProject\Client')->create();
 factory('CodeProject\Client', 5)->create();
+
+##ClientTableSeeder
+php artisan db:seed
+php artisan tinker
+CodeProject\Client::all();
+php artisan make:seeder ClientTableSeeder
+php artisan db:seed
