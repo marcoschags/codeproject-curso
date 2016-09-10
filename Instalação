@@ -41,3 +41,15 @@ php artisan tinker
 CodeProject\Client::all();
 php artisan make:seeder ClientTableSeeder
 php artisan db:seed
+
+##Rotas
+sudo a2enmod rewrite
+sudo nano /etc/apache2/apache2.conf
+Encontrar o seguinte trecho de código
+<Directory /var/www/>
+   Options Indexes FollowSymLinks
+   AllowOverride None
+   Require all granted
+</Directory>
+Substituir "AllowOverride None" por  “AllowOverride All”
+sudo service apache2 restart
