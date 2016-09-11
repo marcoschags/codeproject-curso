@@ -15,7 +15,24 @@ class ClientController extends Controller
 
 	public function store(Request $request)
     {
-    	 return Client::create($request->all());
+    	 return \CodeProject\Client::create($request->all());
 	}
+
+	public function show($id)
+    {
+    	 return \CodeProject\Client::find($id);
+	}
+
+	public function destroy($id)
+    {
+    	 \CodeProject\Client::find($id)->delete();
+	}
+
+
+    //Verificar
+    public function update (Request $request, $id)
+    {
+         return \CodeProject\Client::update($request->all());
+    }
 }
    
