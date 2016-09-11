@@ -12,5 +12,10 @@ class ClientController extends Controller
     {
     	 return \CodeProject\Client::all();
 	}
+
+	public function store(Request $request)
+    {
+    	 return Client::create($request->all());
+	}
 }
    
