@@ -2,37 +2,39 @@
 
 namespace CodeProject\Http\Controllers;
 
+use CodeProject\Models\Client;
 use Illuminate\Http\Request;
 
 use CodeProject\Http\Requests;
+use CodeProject\Http\Controllers\Controller;
 
 class ClientController extends Controller
 {
     public function index()
     {
-    	 return \CodeProject\Client::all();
+    	 return \CodeProject\Models\Client::all();
 	}
 
 	public function store(Request $request)
     {
-    	 return \CodeProject\Client::create($request->all());
+    	 return \CodeProject\Models\Client::create($request->all());
 	}
 
 	public function show($id)
     {
-    	 return \CodeProject\Client::find($id);
+    	 return \CodeProject\Models\Client::find($id);
 	}
 
 	public function destroy($id)
     {
-    	 \CodeProject\Client::find($id)->delete();
+    	 \CodeProject\Models\Client::find($id)->delete();
 	}
 
 
     //Verificar
     public function update (Request $request, $id)
     {
-         return \CodeProject\Client::update($request->all());
+         return \CodeProject\Models\Client::update($request->all());
     }
 }
    

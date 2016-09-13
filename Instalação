@@ -53,3 +53,9 @@ Encontrar o seguinte trecho de código
 </Directory>
 Substituir "AllowOverride None" por  “AllowOverride All”
 sudo service apache2 restart
+
+##Instalando PrettusRepository
+https://github.com/andersao/l5-repository
+composer require prettus/l5-repository
+php artisan vendor:publish
+
