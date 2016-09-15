@@ -11,7 +11,7 @@ use CodeProject\Http\Controllers\Controller;
 
 class ClientController extends Controller
 {
-    public function index(ClientRepositoryEloquent $request)
+    public function index(ClientRepository $request)
     {
     	 return $request->all();
 	}
