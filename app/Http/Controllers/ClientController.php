@@ -3,6 +3,7 @@
 namespace CodeProject\Http\Controllers;
 
 use CodeProject\Entities\Client;
+use CodeProject\Repositories\ClientRepository;
 use CodeProject\Repositories\ClientRepositoryEloquent;
 use Illuminate\Http\Request;
 
