@@ -67,3 +67,8 @@ https://github.com/andersao/l5-repository
 composer require prettus/l5-repository
 php artisan vendor:publish
 
+##Criando ProjectNote
+php artisan make:migration create_project_note_tables --create=project_note
+php artisan make:entity ProjectNote
+composer dump-autoload
+php artisan db:seed
