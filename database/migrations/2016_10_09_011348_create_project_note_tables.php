@@ -12,7 +12,7 @@ class CreateProjectNoteTables extends Migration
      */
     public function up()
     {
-        Schema::create('project_note', function (Blueprint $table) {
+        Schema::create('project_notes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('project_id')->unsigned();
             $table->foreign('project_id')->refences('id')->on('projects');
@@ -29,6 +29,6 @@ class CreateProjectNoteTables extends Migration
      */
     public function down()
     {
-        Schema::drop('project_note');
+        Schema::drop('project_notes');
     }
 }

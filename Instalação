@@ -72,3 +72,7 @@ php artisan make:migration create_project_note_tables --create=project_note
 php artisan make:entity ProjectNote
 composer dump-autoload
 php artisan db:seed
+
+##Testando Relacionamento
+php artisan tinker
+CodeProject\Entities\Project::all();
