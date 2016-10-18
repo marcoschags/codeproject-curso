@@ -27,7 +27,7 @@ export PATH=$PATH:~/.composer/vendor/bin/
 composer global require "laravel/installer=~1.1"
 composer global require "laravel/installer"
 composer create-project laravel/laravel codeproject-curso
-
+https://github.com/barryvdh/laravel-ide-helper
 ##Postman
 
 ##Mudar namespace
@@ -72,7 +72,11 @@ php artisan make:migration create_project_note_tables --create=project_note
 php artisan make:entity ProjectNote
 composer dump-autoload
 php artisan db:seed
+php artisan migrate:refresh --seed
 
 ##Testando Relacionamento
 php artisan tinker
 CodeProject\Entities\Project::all();
+CodeProject\Entities\ProjectNote::all();
+composer update
+

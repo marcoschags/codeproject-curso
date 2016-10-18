@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         //\CodeProject\Entities\Client::truncate();
         //\CodeProject\Entities\Project::truncate();
+        //\CodeProject\Entities\ProjectNote::truncate();
 
         $this->call(UserTableSeeder::class);
         $this->call(ClientTableSeeder::class);
