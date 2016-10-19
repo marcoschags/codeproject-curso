@@ -80,3 +80,9 @@ CodeProject\Entities\Project::all();
 CodeProject\Entities\ProjectNote::all();
 composer update
 
+##Instalando package Outh2
+https://github.com/lucadegasperi/oauth2-server-laravel/blob/master/docs/getting-started/laravel-5.mdNo composer.json
+"lucadegasperi/oauth2-server-laravel": "5.1.*"
+composer update
+
+pacote descontinuado, usar laravel/passport
