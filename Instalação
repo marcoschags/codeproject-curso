@@ -86,3 +86,10 @@ https://github.com/lucadegasperi/oauth2-server-laravel/blob/master/docs/getting-
 composer update
 
 pacote descontinuado, usar laravel/passport
+
+##Criando Rota para acess token
+codeproject-curso$ mysql -uroot -p
+use codeproject_curso;
+SHOW tables;
+DESC oauth_clients;
+INSERT INTO oauth_clients (id, secret, name) values ('1', 'secret', 'AngularAPP');
