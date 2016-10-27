@@ -23,8 +23,12 @@ Route::group(['middleware'=>'oauth'], function (){
 
     Route::resource('client', 'ClientController', ['except' => ['create', 'edit']]);
 
+    Route::group(['middleware' => 'CheckProjectOwner'], function (){
+        Route::resource('project', 'ProjectController', ['except' => ['create', 'edit']]);
+    });
+
     Route::group(['prefix' => 'project'], function (){
-        Route::resource('', 'ProjectController', ['except' => ['create', 'edit']]);
+
     });
 
     Route::get('{id}/note', 'ProjectNoteController@index');

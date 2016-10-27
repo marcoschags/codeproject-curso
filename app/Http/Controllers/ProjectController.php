@@ -7,6 +7,7 @@ use CodeProject\Repositories\ProjectRepository;
 use CodeProject\Services\ClientService;
 use CodeProject\Services\ProjectService;
 use Illuminate\Http\Request;
+use LucaDegasperi\OAuth2Server\Facades\Authorizer;
 
 class ProjectController extends Controller
 {

@@ -92,3 +92,8 @@ use codeproject_curso;
 SHOW tables;
 DESC oauth_clients;
 INSERT INTO oauth_clients (id, secret, name) values ('1', 'secret', 'AngularAPP');
+
+##Verificar rotas
+php artisan route:list
+
+##Criando middleware exemplo
