@@ -97,3 +97,9 @@ INSERT INTO oauth_clients (id, secret, name) values ('1', 'secret', 'AngularAPP'
 php artisan route:list
 
 ##Criando middleware exemplo
+
+##Relacionando ProjectMembers
+php artisan tinker
+CodeProject\Entities\ProjectMember::create(['member_id'=>1, 'project_id'=>10]);
+$p = CodeProject\Entities\Project::find(10);
+$u = CodeProject\Entities\User::find(10);
