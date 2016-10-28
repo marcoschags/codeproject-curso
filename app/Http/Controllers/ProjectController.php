@@ -19,6 +19,7 @@ class ProjectController extends Controller
      * @var ProjectService
      */
     private $service;
+
     /**
      * ProjectController constructor.
      * @param ProjectRepository $repository
@@ -29,10 +30,12 @@ class ProjectController extends Controller
         $this->repository = $repository;
         $this->service = $service;
     }
+
     public function index()
     {
-    	 return $this->repository->findWhere(['owner_id'=>\Authorizer::getResourceOwnerId()]);
-	}
+        return $this->repository->findWhere(['owner_id' => \Authorizer::getResourceOwnerId()]);
+    }
+
     /**
      * @param Request $request
      * @return mixed
@@ -41,18 +44,19 @@ class ProjectController extends Controller
     {
         return $this->service->create($request->all());
     }
+
     /**
      * @param $id
      * @return mixed
      */
     public function show($id)
     {
-        if ($this->checkProjectOwner($id) == false)
-        {
+        if ($this->checkProjectPermission($id) == false) {
             return ['error' => 'Access Forbidem'];
         }
         return $this->repository->find($id);
     }
+
     /**
      * @param Request $request
      * @param $id
@@ -60,20 +64,19 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if ($this->checkProjectOwner($id) == false)
-        {
+        if ($this->checkProjectOwner($id) == false) {
             return ['error' => 'Access Forbidem'];
         }
         return $this->service->update($request->all(), $id);
     }
+
     /**
      * @param $id
      * @return int
      */
     public function destroy($id)
     {
-        if ($this->checkProjectOwner($id) == false)
-        {
+        if ($this->checkProjectOwner($id) == false) {
             return ['error' => 'Access Forbidem'];
         }
         return $this->repository->delete($id);
@@ -83,6 +86,20 @@ class ProjectController extends Controller
     {
         $userId = \Authorizer::getResourceOwnerId();
         return $this->repository->isOwner($projectId, $userId);
+    }
+
+    private function checkProjectMember($projectId)
+    {
+        $userId = \Authorizer::getResourceOwnerId();
+        return $this->repository->hasMember($projectId, $userId);
+    }
+
+    private function checkProjectPermission($projectId)
+    {
+        if ($this->checkProjectOwner($projectId) or $this->checkProjectMember($projectId)) {
+            return true;
+        }
+        return false;
     }
 }
 
