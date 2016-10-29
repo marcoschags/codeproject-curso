@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.2.45 on 2016-10-19.
+ * Generated for Laravel 5.2.45 on 2016-10-29.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -1339,7 +1339,7 @@ namespace {
         /**
          * Get the currently authenticated user.
          *
-         * @return \CodeProject\User|null 
+         * @return \CodeProject\Entities\User|null 
          * @static 
          */
         public static function user(){
@@ -1443,7 +1443,7 @@ namespace {
          *
          * @param mixed $id
          * @param bool $remember
-         * @return \CodeProject\User 
+         * @return \CodeProject\Entities\User 
          * @static 
          */
         public static function loginUsingId($id, $remember = false){
@@ -1548,7 +1548,7 @@ namespace {
         /**
          * Return the currently cached user.
          *
-         * @return \CodeProject\User|null 
+         * @return \CodeProject\Entities\User|null 
          * @static 
          */
         public static function getUser(){
@@ -1590,7 +1590,7 @@ namespace {
         /**
          * Get the last user we attempted to authenticate.
          *
-         * @return \CodeProject\User 
+         * @return \CodeProject\Entities\User 
          * @static 
          */
         public static function getLastAttempted(){
@@ -1630,7 +1630,7 @@ namespace {
         /**
          * Determine if the current user is authenticated.
          *
-         * @return \CodeProject\User 
+         * @return \CodeProject\Entities\User 
          * @throws \Illuminate\Auth\AuthenticationException
          * @static 
          */
@@ -11569,23 +11569,9 @@ namespace {
         public static function setTokenType($tokenType){
             return \LucaDegasperi\OAuth2Server\Authorizer::setTokenType($tokenType);
         }
+        
     }
+
+
 }
-namespace Illuminate\Support{
-    /**
-     * @method Fluent first()
-     * @method Fluent after($column)
-     * @method Fluent change()
-     * @method Fluent nullable()
-     * @method Fluent unsigned()
-     * @method Fluent unique()
-     * @method Fluent index()
-     * @method Fluent primary()
-     * @method Fluent default($value)
-     * @method Fluent onUpdate($value)
-     * @method Fluent onDelete($value)
-     * @method Fluent references($value)
-     * @method Fluent on($value)
-     */
-    class Fluent {}
-}
+
