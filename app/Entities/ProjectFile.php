@@ -33,7 +33,7 @@ use RelationalExample\Model\Users;
  * @method static \Illuminate\Database\Query\Builder|\CodeProject\Entities\Project whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Project extends Model implements Transformable
+class ProjectFile extends Model implements Transformable
 {
     use TransformableTrait;
 
@@ -45,6 +45,6 @@ class Project extends Model implements Transformable
 
     public function project()
     {
-        return $this->belongsTo(Project::class);
+        return $this->belongsTo(ProjectFile::class);
     }
 }

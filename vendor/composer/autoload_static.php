@@ -338,6 +338,7 @@ class ComposerStaticInit968922b17b6ba4ddec9efa9d2aa97750
     );
 
     public static $classMap = array (
+        'AddProjectIdInProjectFiles' => __DIR__ . '/../..' . '/database/migrations/2016_11_05_142445_add_project_id_in_project_files.php',
         'ClientTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ClientTableSeeder.php',
         'CreateClientsTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_07_161319_create_clients_table.php',
         'CreateOauthAccessTokenScopesTable' => __DIR__ . '/../..' . '/database/migrations/2014_04_24_111657_create_oauth_access_token_scopes_table.php',

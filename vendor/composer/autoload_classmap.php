@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddProjectIdInProjectFiles' => $baseDir . '/database/migrations/2016_11_05_142445_add_project_id_in_project_files.php',
     'ClientTableSeeder' => $baseDir . '/database/seeds/ClientTableSeeder.php',
     'CreateClientsTable' => $baseDir . '/database/migrations/2016_09_07_161319_create_clients_table.php',
     'CreateOauthAccessTokenScopesTable' => $baseDir . '/database/migrations/2014_04_24_111657_create_oauth_access_token_scopes_table.php',

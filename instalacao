@@ -106,3 +106,8 @@ $u = CodeProject\Entities\User::find(10);
 
 ##Criando ProjectFile
 php artisan make:migration create_table_files --create=project_files
+
+##Atualizando tabela
+php artisan make:migration add_project_id_in_project_files --table=project_files
+php artisan tinker
+CodeProject\Entities\ProjectFile::all();
