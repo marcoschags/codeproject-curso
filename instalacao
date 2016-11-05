@@ -131,3 +131,9 @@ npm -v
 npm install --no-bin-links
 npm rebuild node-sass --no-bin-links
 npm install
+npm install -f
+
+##Instalação e configuração do Bower.io
+https://bower.io/
+sudo npm install -g bower
+bower -v
