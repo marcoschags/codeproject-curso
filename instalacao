@@ -140,6 +140,11 @@ bower -v
 
 ##Instalação do Gulp
 http://gulpjs.com/
+sudo apt-add-repository ppa:izx/askubuntu
+sudo apt-get update
+sudo apt-get install libnotify-bin
 sudo npm install --global gulp-cli
-sudo npm init
-npm install --save-dev gulp-install
+sudo npm install --save-dev gulp-install
+sudo npm install gulp -g
+sudo npm install gulp --save-dev
+sudo npm install --save-dev gulp-notify
