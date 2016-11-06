@@ -137,3 +137,9 @@ npm install -f
 https://bower.io/
 sudo npm install -g bower
 bower -v
+
+##Instalação do Gulp
+http://gulpjs.com/
+sudo npm install --global gulp-cli
+sudo npm init
+npm install --save-dev gulp-install
