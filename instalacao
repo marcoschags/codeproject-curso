@@ -148,3 +148,14 @@ sudo npm install --save-dev gulp-install
 sudo npm install gulp -g
 sudo npm install gulp --save-dev
 sudo npm install --save-dev gulp-notify
+
+##Instalando dependências com o Bower
+bower init
+bower install angular#1.4.1 --save
+bower install angular-route#1.4.1 --save
+bower install angular-resource#1.4.1 --save
+bower install angular-animate#1.4.1 --save
+bower install angular-messages#1.4.1 --save
+bower install angular-bootstrap#0.13.0 --save
+bower install angular-strap#2.2.4 --save
+bower install bootstrap#3.3.5 --save
