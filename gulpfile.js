@@ -1,6 +1,6 @@
 var elixir = require('laravel-elixir'),
     liveReload = require('gulp-livereload'),
-    clean = require('gulp-clean'),
+    clean = require('rimraf'),
     gulp = require('gulp');
 
 var config = {
@@ -28,7 +28,7 @@ config.build_path_css = config.build_path + '/css';
 config.build_vendor_path_css = config.build_path_css + '/vendor';
 config.vendor_path_css = [
     config.bower_path + '/bootstrap/dist/css/bootstrap.min.css',
-    config.bower_path + '/bootstrap/dist/css/bootstrap.theme.min.css'
+    config.bower_path + '/bootstrap/dist/css/bootstrap-theme.min.css',
 ];
 
 gulp.task('copy-styles', function () {
@@ -45,7 +45,7 @@ gulp.task('copy-styles', function () {
 
 gulp.task('copy-scripts', function () {
     gulp.src([
-        config.assets_path + '/css/**/*.js'
+        config.assets_path + '/js/**/*.js'
     ])
         .pipe(gulp.dest(config.build_path_js))
         .pipe(liveReload());
@@ -53,6 +53,16 @@ gulp.task('copy-scripts', function () {
     gulp.src(config.vendor_path_js)
         .pipe(gulp.dest(config.build_vendor_path_js))
         .pipe(liveReload());
+});
+
+gulp.task('clear-build-folder',function () {
+    clean.sync(config.build_path);
+});
+
+gulp.task('watch-dev', function () {
+    liveReload.listen();
+    gulp.start('copy-styles',['clear-build-folder'],'copy-scripts');
+    gulp.watch(config.assets_path + '/**',['copy-styles','copy-scripts']);
 });
 /*
  |--------------------------------------------------------------------------
