@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Laravel</title>
-	@if(config::get('app.debug'))
+	@if(config('app.debug'))
 			<!--css de terceiros-->
 			<link href="{{asset('build/css/vendor/bootstrap.min.css')}}" rel="stylesheet"/>
 			<link href="{{asset('build/css/vendor/bootstrap.theme.min.css')}}" rel="stylesheet"/>
@@ -65,7 +65,7 @@
 	@yield('content')
 
 	<!-- Scripts -->
-	@if(config::get('app.debug'))
+	@if(config('app.debug'))
 		<script src="{{asset('build/js/vendor/jquery.min.js')}}"></script>
 		<script src="{{asset('build/js/vendor/angular.min.js')}}"></script>
 		<script src="{{asset('build/js/vendor/angular-route.min.js')}}"></script>
