@@ -41,3 +41,7 @@ Route::group(['middleware'=>'oauth'], function (){
 
 
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
